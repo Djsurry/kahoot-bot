@@ -24,7 +24,7 @@ class Browser(threading.Thread):
         self.browser.get('https://kahoot.it/')
         elem = self.browser.find_element_by_id(INPUT_ID)
         elem.send_keys(self.pin + '\n')
-        sleep(1)
+        sleep(5)
         elem = self.browser.find_element_by_id(NAME_ID)
         elem.send_keys(self.name + '\n')
     def test(self):
@@ -115,7 +115,7 @@ class Server:
 class Botnet:
     def __init__(self, code, names, number):
         self.code = code
-        self.names = names.split() if names else Botnet.gen_names()
+        self.names = names.split() if names != 'None' else Botnet.gen_names()
         self.number = number
 
     def test(self):
