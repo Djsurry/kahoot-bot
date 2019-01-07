@@ -127,7 +127,7 @@ class Botnet:
         created = 0
         index = 0
         max_index = len(self.names)-1
-        while created < self.number:
+        while created < int(self.number):
             b = Browser(self.code, self.names[index])
             b.start()
             index += 1
