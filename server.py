@@ -51,6 +51,7 @@ class Host(threading.Thread):
             print(data)
             if data == '\x00':
                 seen += 1
+                print(seen)
                 if seen == 3:
                     print('exiting')
                     break
