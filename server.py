@@ -124,4 +124,4 @@ class Botnet:
 
 
 s = Server()
-s.test()
+s.run()
