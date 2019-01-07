@@ -5,7 +5,7 @@ from time import sleep
 import threading
 import names
 
-path = '/Users/davidsurry/Downloads/chromedriver'
+path = '/home/david/kahoot-bot/chromedriver'
 INPUT_ID = 'inputSession'
 NAME_ID = 'username'
 
