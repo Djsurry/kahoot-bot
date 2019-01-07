@@ -41,6 +41,7 @@ class Host(threading.Thread):
         self.sock = conn
 
     def read(self):
+        print('reading')
         code =[]
         names = []
         number = []
