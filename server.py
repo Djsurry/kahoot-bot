@@ -82,9 +82,9 @@ class Host(threading.Thread):
             return
         b = Botnet(code, names, number)
         if b.test():
-            self.sock.sendall('\x01')
+            self.sock.sendall(b'\x01')
         else:
-            self.sock.sendall('\x00')
+            self.sock.sendall(b'\x00')
         b.start()
         self.sock.close()
 
