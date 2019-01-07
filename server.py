@@ -8,13 +8,15 @@ import names
 path = '/home/david/kahoot-bot/chromedriver'
 INPUT_ID = 'inputSession'
 NAME_ID = 'username'
+options = webdriver.ChromeOptions()
+options.binary_location = "/home/david/google-chrome-stable_current_amd64.deb"
 
 
 class Browser:
     def __init__(self, pin, name):
         self.name = name
         self.pin = pin
-        self.browser = webdriver.Chrome(path)
+        self.browser = webdriver.Chrome(path, chrome_options=options)
     def run(self):
         self.browser.get('https://kahoot.it/')
         elem = self.browser.find_element_by_id(INPUT_ID)
