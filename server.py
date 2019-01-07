@@ -89,6 +89,7 @@ class Host(threading.Thread):
             self.sock.sendall(b'\x01')
         else:
             self.sock.sendall(b'\x00')
+            return
         b.start()
         self.sock.close()
 
