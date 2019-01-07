@@ -48,6 +48,7 @@ class Host(threading.Thread):
         seen = 0
         while True:
             data = self.sock.recv(1)
+            print(data)
             if data == '\x00':
                 seen += 1
                 if seen == 3:
