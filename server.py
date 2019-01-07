@@ -64,6 +64,7 @@ class Host(threading.Thread):
     def run(self):
         try:
             code, names, number = self.read()
+            print(f'got {code}, {names}, {number}')
         except:
             self.sock.close()
             return
@@ -84,6 +85,7 @@ class Server:
 
     def run(self):
         conn, addr = self.sock.accept()
+        print('Got connection')
         h = Host(conn)
         h.start()
 
@@ -95,10 +97,12 @@ class Botnet:
         self.number = number
 
     def test(self):
+        print('testing')
         b = Browser(self.code, self.names[0])
         return b.test()
 
     def start(self):
+        print('starting')
         created = 0
         index = 0
         max_index = len(self.names)-1

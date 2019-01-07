@@ -24,7 +24,7 @@ class Browser:
 class Window:
     def __init__(self):
         self.layout = [[sg.Text('Welcome to Kahoot-Bot!', key='intro')],
-                       [sg.Text('Game Code'), sg.input(key='code')]
+                       [sg.Text('Game Code'), sg.Input(key='code')],
                        [sg.Text('Number of bots (no more than 100)'), sg.Input(key='number')],
                        [sg.Text('Custom names *optional* (text file of names, each on own line)')],
                        [sg.Input(key='file', do_not_clear=True), sg.FileBrowse()],
