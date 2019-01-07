@@ -28,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+            <state relative-caret-position="555">
+              <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -100,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1546838373524</updated>
       <workItem from="1546838377931" duration="3934000" />
-      <workItem from="1546843026548" duration="464000" />
+      <workItem from="1546843026548" duration="619000" />
     </task>
     <task id="LOCAL-00001" summary="bugs">
       <created>1546843053490</created>
@@ -130,11 +130,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546843477652</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bugs">
+      <created>1546843494469</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1546843494469</updated>
+    </task>
+    <task id="LOCAL-00006" summary="bugs">
+      <created>1546843528033</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546843528033</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4398000" />
+    <option name="totallyTimeSpent" value="4553000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -192,8 +206,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+        <state relative-caret-position="555">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

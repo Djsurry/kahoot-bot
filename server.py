@@ -80,7 +80,7 @@ class Server:
     def __init__(self):
         self.port = 55555
         self.sock = socket.socket()
-        self.sock.bind(('', 0))
+        self.sock.bind(('', 55555))
         print(f'PORT: {self.sock.getsockname()[1]}')
         self.sock.listen(5)
     def test(self):
@@ -121,6 +121,7 @@ class Botnet:
     @staticmethod
     def gen_names():
         return [names.get_first_name() for _ in range(20)]
+
 
 s = Server()
 s.test()
