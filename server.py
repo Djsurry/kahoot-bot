@@ -52,6 +52,7 @@ class Host(threading.Thread):
             if data == '\x00':
                 seen += 1
                 if seen == 3:
+                    print('exiting')
                     break
                 continue
             if seen == 0:
@@ -60,13 +61,14 @@ class Host(threading.Thread):
                 names.append(data)
             elif seen == 2:
                 number.append(data)
-
+        print('returning')
         return b''.join(code).decode(), b''.join(names).decode(), b''.join(number).decode()
 
     def run(self):
         print('STARTING')
         try:
             code, names, number = self.read()
+            print('done')
             print(f'got {code}, {names}, {number}')
         except:
             self.sock.close()
