@@ -30,7 +30,7 @@ class Browser:
         try:
             elem = self.browser.find_element_by_id(NAME_ID)
             return True
-        except selenium.common.exceptions.NoSuchElementException:
+        except:
             return False
 
 
