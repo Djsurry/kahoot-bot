@@ -51,7 +51,7 @@ class Host(threading.Thread):
             if not data:
                 return None, None, None
             print(data)
-            if data == '\x00':
+            if data == b'\x00':
                 seen += 1
                 print(seen)
                 if seen == 3:
