@@ -20,6 +20,7 @@ class Browser(threading.Thread):
         self.browser = None
 
     def run(self):
+        global options
         print('RUNNING')
         self.browser = webdriver.Chrome(path, chrome_options=options)
         print('made browser')
