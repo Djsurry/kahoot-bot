@@ -48,6 +48,8 @@ class Host(threading.Thread):
         seen = 0
         while True:
             data = self.sock.recv(1)
+            if not data:
+                return None, None, None
             print(data)
             if data == '\x00':
                 seen += 1
@@ -69,6 +71,8 @@ class Host(threading.Thread):
         print('STARTING')
         try:
             code, names, number = self.read()
+            if code is None:
+                return
             print('done')
             print(f'got {code}, {names}, {number}')
         except:
