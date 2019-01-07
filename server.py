@@ -62,6 +62,7 @@ class Host(threading.Thread):
         return b''.join(code).decode(), b''.join(names).decode(), b''.join(number).decode()
 
     def run(self):
+        print('STARTING')
         try:
             code, names, number = self.read()
             print(f'got {code}, {names}, {number}')
