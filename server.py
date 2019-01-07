@@ -9,7 +9,7 @@ path = '/home/david/kahoot-bot/chromedriver'
 INPUT_ID = 'inputSession'
 NAME_ID = 'username'
 options = webdriver.ChromeOptions()
-options.binary_location = "/home/david/google-chrome-stable_current_amd64.deb"
+options.add_argument('headless')
 
 
 class Browser:
