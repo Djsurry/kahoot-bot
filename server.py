@@ -127,8 +127,10 @@ class Botnet:
         print('starting')
         created = 0
         index = 0
+        print(f"names: {self.names}")
         max_index = len(self.names)-1
         while created < int(self.number):
+            print('Creating bot {}'.format(created))
             b = Browser(self.code, self.names[index])
             b.start()
             index += 1
