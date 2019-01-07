@@ -81,7 +81,7 @@ class Server:
         self.port = 55555
         self.sock = socket.socket()
         self.sock.bind(('', 0))
-        print(f'PORT: {s.getsockname()[1]}')
+        print(f'PORT: {self.sock.getsockname()[1]}')
         self.sock.listen(5)
     def test(self):
         conn, addr = self.sock.accept()
