@@ -20,7 +20,9 @@ class Browser(threading.Thread):
         self.browser = None
 
     def run(self):
+        print('RUNNING')
         self.browser = webdriver.Chrome(path, chrome_options=options)
+        print('made browser')
         self.browser.get('https://kahoot.it/')
         elem = self.browser.find_element_by_id(INPUT_ID)
         elem.send_keys(self.pin + '\n')
