@@ -85,6 +85,7 @@ class Server:
         self.sock.listen(5)
     def test(self):
         conn, addr = self.sock.accept()
+        print('GOT CONN')
         print(conn.recv(2048))
     def run(self):
         conn, addr = self.sock.accept()
