@@ -12,12 +12,15 @@ options = webdriver.ChromeOptions()
 options.add_argument('headless')
 
 
-class Browser:
+class Browser(threading.Thread):
     def __init__(self, pin, name):
+        super().__init__()
         self.name = name
         self.pin = pin
-        self.browser = webdriver.Chrome(path, chrome_options=options)
+        self.browser = None
+
     def run(self):
+        self.browser = webdriver.Chrome(path, chrome_options=options)
         self.browser.get('https://kahoot.it/')
         elem = self.browser.find_element_by_id(INPUT_ID)
         elem.send_keys(self.pin + '\n')
@@ -25,6 +28,7 @@ class Browser:
         elem = self.browser.find_element_by_id(NAME_ID)
         elem.send_keys(self.name + '\n')
     def test(self):
+        self.browser = webdriver.Chrome(path, chrome_options=options)
         self.browser.get('https://kahoot.it/')
         elem = self.browser.find_element_by_id(INPUT_ID)
         elem.send_keys(self.pin + '\n')
@@ -124,7 +128,7 @@ class Botnet:
         max_index = len(self.names)-1
         while created < self.number:
             b = Browser(self.code, self.names[index])
-            b.run()
+            b.start()
             index += 1
             if index > max_index:
                 index = 0
