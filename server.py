@@ -32,9 +32,9 @@ class Browser(threading.Thread):
         self.browser.get('https://kahoot.it/')
         elem = self.browser.find_element_by_id(INPUT_ID)
         elem.send_keys(self.pin + '\n')
-        sleep(1)
+        sleep(5)
         try:
-            elem = self.browser.find_element_by_id(NAME_ID)
+            _ = self.browser.find_element_by_id(NAME_ID)
             return True
         except:
             return False

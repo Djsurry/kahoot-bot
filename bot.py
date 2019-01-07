@@ -29,7 +29,7 @@ class Window:
                        [sg.Text('Custom names *optional* (text file of names, each on own line)')],
                        [sg.Input(key='file', do_not_clear=True), sg.FileBrowse()],
                        [sg.OK(), sg.Exit(), sg.Text('',key='data')]]
-        self.window = sg.Window('Window that stays open').Layout(self.layout)
+        self.window = sg.Window('Kahoot Bot').Layout(self.layout)
 
     def run(self):
         while True:
@@ -57,7 +57,7 @@ class Window:
                     continue
             else:
                 names = None
-            self.window.FindElement('data').Update('Waiting')
+
             r = self.order_botting(code, names, number)
 
             if r is None:
