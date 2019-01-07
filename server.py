@@ -105,10 +105,11 @@ class Server:
         print('GOT CONN')
         print(conn.recv(2048))
     def run(self):
-        conn, addr = self.sock.accept()
-        print('Got connection')
-        h = Host(conn)
-        h.start()
+        while True:
+            conn, addr = self.sock.accept()
+            print('Got connection')
+            h = Host(conn)
+            h.start()
 
 
 class Botnet:

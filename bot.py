@@ -28,7 +28,7 @@ class Window:
                        [sg.Text('Number of bots (no more than 100)'), sg.Input(key='number')],
                        [sg.Text('Custom names *optional* (text file of names, each on own line)')],
                        [sg.Input(key='file', do_not_clear=True), sg.FileBrowse()],
-                       [sg.OK(), sg.Exit()]]
+                       [sg.OK(), sg.Exit(), sg.Text('',key='data')]]
         self.window = sg.Window('Window that stays open').Layout(self.layout)
 
     def run(self):
@@ -57,15 +57,17 @@ class Window:
                     continue
             else:
                 names = None
-            self.window.FindElement('intro').Update('Working')
+            self.window.FindElement('data').Update('Waiting')
             r = self.order_botting(code, names, number)
 
             if r is None:
                 sg.Popup('Unknown Error Occured')
+                self.window.FindElement('data').Update('')
             elif r == 1:
                 sg.Popup('Success')
             elif r == 0:
                 sg.Popup('Failure: Bad code')
+                self.window.FindElement('data').Update('')
 
     @staticmethod
     def order_botting(code, names, number):
