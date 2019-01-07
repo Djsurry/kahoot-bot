@@ -114,3 +114,5 @@ class Botnet:
     def gen_names():
         return [names.get_first_name() for _ in range(20)]
 
+s = Server()
+s.run()
