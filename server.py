@@ -82,7 +82,9 @@ class Server:
         self.sock = socket.socket()
         self.sock.bind(('', self.port))
         self.sock.listen(5)
-
+    def test(self):
+        conn, addr = self.sock.accept()
+        print(conn.recv(2048))
     def run(self):
         conn, addr = self.sock.accept()
         print('Got connection')
@@ -119,4 +121,4 @@ class Botnet:
         return [names.get_first_name() for _ in range(20)]
 
 s = Server()
-s.run()
+s.test()

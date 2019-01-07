@@ -70,7 +70,9 @@ class Window:
     @staticmethod
     def order_botting(code, names, number):
         sock = socket()
-        sock.connect(('167.99.180.229', 5555))
+        print('connecting')
+        sock.connect(('167.99.180.229', 55555))
+        print('sendin')
         sock.sendall(f'{code}\x00{names}\x00{number}\x00'.encode())
         resp = sock.recv(1)
         if not resp:
